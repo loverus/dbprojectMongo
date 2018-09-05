@@ -6,12 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
-@Entity
+//@Entity
 public class Rank {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String rankName;
+
+    protected Rank(){};
 
     public Rank(String rankName) {
         this.rankName = rankName;
@@ -31,5 +33,12 @@ public class Rank {
 
     public void setRankName(String rankName) {
         this.rankName = rankName;
+    }
+
+    @Override
+    public String toString() {
+        return "Rank{" +
+                "rankName='" + rankName + '\'' +
+                '}';
     }
 }

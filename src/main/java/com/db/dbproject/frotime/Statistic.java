@@ -1,5 +1,6 @@
-package com.db.dbproject;
+package com.db.dbproject.frotime;
 
+import com.db.dbproject.User;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.Entity;

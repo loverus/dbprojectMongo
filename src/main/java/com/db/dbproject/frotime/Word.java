@@ -1,5 +1,6 @@
-package com.db.dbproject;
+package com.db.dbproject.frotime;
 
+import com.db.dbproject.Rank;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.springframework.data.annotation.Id;
 

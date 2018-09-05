@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import java.time.LocalDate;
 
-@Entity
+//@Entity
 public class User {
     @Id
 
@@ -17,6 +17,8 @@ public class User {
     private  String password;
     private Rank rank;
     private LocalDate dateOfBirth;
+
+    protected User(){}
 
     public User(String name, String password, Rank rank, LocalDate dateOfBirth) {
         this.name = name;
@@ -63,5 +65,14 @@ public class User {
 
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
